@@ -1,20 +1,4 @@
 
-> collect_metrics(default_res)
-# A tibble: 7 × 4
-.metric      .estimator .estimate .config             
-<chr>        <chr>          <dbl> <chr>               
-  1 f_meas       binary         0.333 Preprocessor1_Model1
-2 precision    binary         0.333 Preprocessor1_Model1
-3 recall       binary         0.333 Preprocessor1_Model1
-4 spec         binary         0.857 Preprocessor1_Model1
-5 accuracy     binary         0.765 Preprocessor1_Model1
-6 bal_accuracy binary         0.595 Preprocessor1_Model1
-7 pr_auc       binary         0.477 Preprocessor1_Model1
-> conf_mat(preds, truth = falling_1, estimate = .pred_class)
-Truth
-Prediction Yes No
-Yes   2  4
-No    4 24
 
 
 rm(list = ls())
@@ -302,5 +286,6 @@ model <- 'LightGBM'
 
 vip(final_fit, num_features = 10) +
   ggtitle(paste('Most predictive features for\n', label, 'using', model))
+
 
 
