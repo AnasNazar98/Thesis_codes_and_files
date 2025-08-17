@@ -125,7 +125,6 @@ fitted_model <- extract_fit_parsnip(default_res)
 vip(fitted_model$fit, num_features = 10) +
   ggtitle(paste('Most predictive features for\n', label, 'using', model))
 
-# this is the results for the thesis, based on the default parameters, 
 # tuning did not yield better metrics for this outcome. 
 
 
@@ -286,6 +285,7 @@ model <- 'LightGBM'
 
 vip(final_fit, num_features = 10) +
   ggtitle(paste('Most predictive features for\n', label, 'using', model))
+
 
 
 
